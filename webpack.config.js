@@ -7,7 +7,7 @@ var browserConfig = {
   output: {
     path        : path.resolve(__dirname, 'public'),
     filename    : 'bundle.js',
-    publicPath  : 'public'
+    publicPath  : '/public'
   },
   module: {
     rules: [
@@ -30,9 +30,9 @@ var serverConfig = {
   target: 'node',
   externals: [nodeExternals()],
   output: {
-    path: __dirname,
-    filename: 'server.js',
-    publicPath: './dist'
+    path        : path.resolve(__dirname, 'public'),
+    filename    : 'server.js',
+    publicPath  : '/public'
   },
   module: {
     rules: [

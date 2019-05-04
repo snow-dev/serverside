@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 app.get("*", (req, res) => {
   const markup = renderToString(
-    <App/>
+    <App data="Tyler"/>
   );
 
   res.send(
