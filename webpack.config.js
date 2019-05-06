@@ -30,9 +30,9 @@ var serverConfig = {
   target: 'node',
   externals: [nodeExternals()],
   output: {
-    path        : path.resolve(__dirname, 'public'),
+    path        : __dirname,
     filename    : 'server.js',
-    publicPath  : '/public'
+    publicPath  : '/'
   },
   module: {
     rules: [
